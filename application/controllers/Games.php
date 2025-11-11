@@ -16,15 +16,4 @@ class Games extends CI_Controller
         $this->load->view('templates/footer', $data);
         $this->load->view('templates/js', $data);
     }
-
-    public function new()
-    {
-        $data['title'] = "Games - CodeIgniter";
-
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/nav_top', $data);
-        $this->load->view('pages/From-Games_view', $data);
-        $this->load->view('templates/footer', $data);
-        $this->load->view('templates/js', $data);
-    }
 }
