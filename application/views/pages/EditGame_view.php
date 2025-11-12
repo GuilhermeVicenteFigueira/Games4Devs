@@ -5,40 +5,40 @@
 
 			<div class="col-md-12">
 					
-					<form action="<?= base_url('NewGame/store') ?>" method="post">
-					
+					<form action="<?= base_url('EditGame/update/' . $game['id']) ?>" method="post">
+
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="name">Name</label>
-							<input type="text" class="form-control" name="name" id="name" placeholder="Name" required value="<?= isset($game) ? $game['name'] : "" ?>">
+							<input type="text" class="form-control" name="name" id="name" placeholder="Name" required value="<?= isset($game) ? $game["name"]: "" ?>">
 						</div>
 					</div>
 
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="description">Description</label>
-							<textarea name="description" id="description" rows="5" class="form-control" required>"<?= isset($game) ? $game['name'] : "" ?>"</textarea>
+							<textarea name="description" id="description" rows="5" class="form-control" required><?= isset($game) ? $game["description"]: "" ?></textarea>
 						</div>
 					</div>
 
                     <div class="col-md-6">
 						<div class="form-group">
 							<label for="price">Price</label>
-							<input type="text" class="form-control" name="price" id="price" placeholder="Price" required required value="<?= isset($game) ? $game['price'] : "" ?>">
+							<input type="text" class="form-control" name="price" id="price" placeholder="Price" required value="<?= isset($game) ? $game["price"]: "" ?>">
 						</div>
 					</div>
 
                     <div class="col-md-6">
 						<div class="form-group">
 							<label for="developer">Developer</label>
-							<input type="text" class="form-control" name="developer" id="developer" placeholder="Developer" required required value="<?= isset($game) ? $game['developer'] : "" ?>">
+							<input type="text" class="form-control" name="developer" id="developer" placeholder="Developer" required value="<?= isset($game) ? $game["developer"]: "" ?>">
 						</div>
 					</div>
 
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="release_date">Release Date</label>
-							<input type="Date" class="form-control" name="release_date" id="release_date" placeholder="Release Date" required required value="<?= isset($game) ? $game['release_date'] : "" ?>">
+							<input type="Date" class="form-control" name="release_date" id="release_date" placeholder="Release Date" required value="<?= isset($game) ? $game["release_date"]: "" ?>">
 						</div>
 					</div>
 

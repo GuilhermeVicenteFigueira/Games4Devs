@@ -26,7 +26,16 @@
 						<td><?= $game['price'] ?></td>
 						<td><?= $game['developer'] ?></td>
 						<td><?= $game['release_date'] ?></td>
-						<td>XXXXX</td>
+						<td>
+							<a href="<?= base_url('EditGame/edit/' . $game['id']) ?>"
+								class="btn btn-sm btn-warning">
+								<i class="fas fa-pencil-alt"></i> Editar
+							</a>
+							<a href="<?= base_url('DeleteGame/delete/' . $game['id']) ?>"
+								class="btn btn-sm btn-danger">
+								<i class="fas fa-trash"></i> Excluir
+							</a>
+						</td>
 					</tr>
 				<?php endforeach; ?>
 			</tbody>
